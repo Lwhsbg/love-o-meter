@@ -37,3 +37,14 @@ function calculatelove() {
     document.getElementById("message").innerHTML = message;
     document.getElementById("hearts").innerHTML = "💗💗💗";
 }
+function resetlove() {
+    document.getElementById("sign1").value = "";
+    document.getElementById("sign2").value = "";
+
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("message").innerHTML = "";
+
+    document.getElementById("bar").style.width = "0%";
+
+    document.getElementById("hearts").innerHTML = "";
+}
