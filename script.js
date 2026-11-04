@@ -9,6 +9,7 @@ function calculatelove() {
     }
 
     var percentage = Math.floor(Math.random() * 101);
+    document.getElementById("bar").style.width = percentage + "%";
 
     document.getElementById("result").innerHTML = percentage + "% 💗";
 
@@ -34,5 +35,5 @@ function calculatelove() {
     }
 
     document.getElementById("message").innerHTML = message;
-
+    document.getElementById("hearts").innerHTML = "💗💗💗";
 }
