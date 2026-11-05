@@ -25,7 +25,7 @@ function calculatelove() {
         percentage = 100;
     }
     else {
-        percentage = Math.floor(Math.random() * 101);
+        percentage = Math.floor(Math.random() * 100);
     }
 
     document.getElementById("bar").style.width = percentage + "%";
