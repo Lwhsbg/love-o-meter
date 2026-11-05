@@ -8,9 +8,12 @@ function calculatelove() {
         alert("Uhh maybe you need to choose the signs first?💔");
         return;
     }
-
-    var percentage = Math.floor(Math.random() * 101);
-
+    if ((sign1.includes("Gemini") && sign2.includes("Scorpio")) || (sign1.includes("Scorpio") && sign2.includes("Gemini"))){
+        percentage = 100;
+    }
+    else {
+        var percentage = Math.floor(Math.random() * 101);
+    }
     document.getElementById("bar").style.width = percentage + "%";
     document.getElementById("result").innerHTML = percentage + "% 💗";
 
@@ -41,7 +44,11 @@ function calculatelove() {
 
     var verdict = "";
 
-    if (percentage <= 20) {
+    if ((sign1.includes("Gemini") && sign2.includes("Scorpio")) || (sign1.includes("Scorpio") && sign2.includes("Gemini"))) {
+        verdict = "Get married today and live together forever."
+    }
+
+    else if (percentage <= 20) {
         verdict = "Dont let it get to you, million of fishes in the sea.";
     }
     else if (percentage <= 40) {
@@ -59,7 +66,7 @@ function calculatelove() {
 
     document.getElementById("message").innerHTML = message;
     document.getElementById("verdict").innerHTML = verdict;
-    document.getElementById("hearts").innerHTML = "💗💗💗";
+    document.getElementById("hearts").innerHTML = "💗";
 }
 
 function resetlove() {

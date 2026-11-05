@@ -1,7 +1,18 @@
+@font-face {
+    font-family: "Matcha Style";
+    src: url("Matcha Style.ttf")
+}
+
 body{
-    background-color: #ffe6ee;
+    background-image: url("heart.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
     color: #d6336c;
-    font-family: Arial;
+    zoom: 2;
+    font-family: Matcha Style;
     text-align: center;
     margin: 40px;
 }
@@ -25,22 +36,30 @@ hr {
 }
 select {
     padding: 10px;
+    font-family: "Matcha Style";
     width: 220px;
     border: 1px solid pink;
     border-radius: 5px;
 }
 button {
-    background-color: #ff5c8a;
+    background-color: #ff8fb1;
+    font-family: "Matcha Style";
     color: white;
-    border: none;
-    padding: 8px 14px;
-    margin: 5px;
-    border-radius: 8px;
+    border: 1px solid #e87599;
+    padding: 12px 18px;
+    margin: 8px 5px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 15px;
+    font-weight: bold;
+    box-shadow: 2px 3px 0px #e6a0b5;
+    transistion: 0.2s
 }
 button:hover {
-    background-color: #d6336c;
+    background-color: #e87599;
+    transform: translateY(-2px);
+    box-shadow: 2px 5 px 0px #d9829e;
+
 }
 #result {
     margin-top: 25px;
