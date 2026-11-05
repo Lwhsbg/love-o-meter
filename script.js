@@ -1,5 +1,10 @@
+var alreadyChecked = false;
 
 function calculatelove() {
+
+    if (alreadyChecked == true) {
+        return;
+    }
 
     var sign1 = document.getElementById("sign1").value;
     var sign2 = document.getElementById("sign2").value;
@@ -8,12 +13,21 @@ function calculatelove() {
         alert("Uhh maybe you need to choose the signs first?💔");
         return;
     }
-    if ((sign1.includes("Gemini") && sign2.includes("Scorpio")) || (sign1.includes("Scorpio") && sign2.includes("Gemini"))){
+
+    alreadyChecked = true;
+
+    document.querySelector("button[onclick='calculatelove()']").disabled = true;
+
+    var percentage;
+
+    if ((sign1.includes("Gemini") && sign2.includes("Scorpio")) ||
+        (sign1.includes("Scorpio") && sign2.includes("Gemini"))) {
         percentage = 100;
     }
     else {
-        var percentage = Math.floor(Math.random() * 101);
+        percentage = Math.floor(Math.random() * 101);
     }
+
     document.getElementById("bar").style.width = percentage + "%";
     document.getElementById("result").innerHTML = percentage + "% 💗";
 
@@ -44,10 +58,10 @@ function calculatelove() {
 
     var verdict = "";
 
-    if ((sign1.includes("Gemini") && sign2.includes("Scorpio")) || (sign1.includes("Scorpio") && sign2.includes("Gemini"))) {
-        verdict = "Get married today and live together forever."
+    if ((sign1.includes("Gemini") && sign2.includes("Scorpio")) ||
+        (sign1.includes("Scorpio") && sign2.includes("Gemini"))) {
+        verdict = "Get married today and live together forever.";
     }
-
     else if (percentage <= 20) {
         verdict = "Dont let it get to you, million of fishes in the sea.";
     }
@@ -70,6 +84,11 @@ function calculatelove() {
 }
 
 function resetlove() {
+
+    alreadyChecked = false;
+
+    // Enable the compatibility button again
+    document.querySelector("button[onclick='calculatelove()']").disabled = false;
 
     document.getElementById("sign1").value = "";
     document.getElementById("sign2").value = "";
