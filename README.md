@@ -1,6 +1,6 @@
 ## love-o-meter
 
-Demo: 
+Demo:  https://lwhsbg.github.io/love-o-meter/
 
 # What It Is
 
