@@ -67,3 +67,8 @@ button:hover {
     font-size: 25px;
     margin-top: 10px;
 }
+#verdict {
+    color: #d6336c;
+    font-size: 17px;
+    margin-top: 15px;
+}
